@@ -1,0 +1,43 @@
+body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 2rem 2rem 3rem 3rem;
+}
+
+.resize {
+  background-color: #353535;
+  border-radius: 1rem;
+  resize: both;
+  object-fit: scale-down;
+  overflow: hidden;
+}
+
+.depth-effect {
+  border-radius: 2rem;
+}
+.depth-effect:hover {
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset,
+    -10px -10px 10px rgba(255, 255, 255, 0.1) inset;
+}
+
+.container {
+  /* this help to make specific all size in one line instead of separate min() max() */
+
+  /* width: clamp(min, prefer, max); */
+  width: clamp(400px, 50vw, 800px);
+  background-color: #353535;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  background-color: #353535;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, red, blue);
+  background-clip: text;
+  color: transparent;
+}
