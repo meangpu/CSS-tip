@@ -41,3 +41,40 @@ body {
   background-clip: text;
   color: transparent;
 }
+
+:root {
+  counter-reset: headings;
+}
+
+h3 {
+  counter-increment: headings;
+}
+
+h3::before {
+  content: counter(headings);
+  background-color: #006bc2;
+  border-radius: 1rem;
+  padding: 0.15rem 0.3rem;
+  margin: 0 1rem 0rem 0rem;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  overflow-x: scroll;
+
+  scroll-snap-type: x mandatory; /* this line is what he teach to make it snap */
+}
+
+.card {
+  scroll-snap-align: center; /* this line is what he teach to make it snap */
+  box-sizing: border-box;
+  padding: 20px 30px;
+  flex-shrink: 0;
+  width: 300px;
+  background-color: #353535;
+  border-radius: 2rem;
+  text-align: center;
+}
